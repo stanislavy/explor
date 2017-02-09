@@ -14,6 +14,9 @@
 		861528431D2F46EA00F83C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861528411D2F46EA00F83C6D /* LaunchScreen.storyboard */; };
 		8615284E1D2F46EA00F83C6D /* explorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8615284D1D2F46EA00F83C6D /* explorTests.swift */; };
 		861528591D2F46EA00F83C6D /* explorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861528581D2F46EA00F83C6D /* explorUITests.swift */; };
+		86AEF9D61E20C8EE00FCC929 /* EXPTabBarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AEF9D51E20C8EE00FCC929 /* EXPTabBarNavigation.swift */; };
+		86D57CE31E4C18CF00BE1414 /* EXPAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D57CE21E4C18CF00BE1414 /* EXPAccount.swift */; };
+		86D57CE61E4C1C1900BE1414 /* EXPAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D57CE51E4C1C1900BE1414 /* EXPAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		861528541D2F46EA00F83C6D /* explorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = explorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		861528581D2F46EA00F83C6D /* explorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = explorUITests.swift; sourceTree = "<group>"; };
 		8615285A1D2F46EA00F83C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86AEF9D51E20C8EE00FCC929 /* EXPTabBarNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EXPTabBarNavigation.swift; path = Navigation/EXPTabBarNavigation.swift; sourceTree = "<group>"; };
+		86D57CE21E4C18CF00BE1414 /* EXPAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EXPAccount.swift; path = Account/EXPAccount.swift; sourceTree = "<group>"; };
+		86D57CE51E4C1C1900BE1414 /* EXPAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EXPAccountViewController.swift; path = Controllers/EXPAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +103,10 @@
 		861528371D2F46EA00F83C6D /* explor */ = {
 			isa = PBXGroup;
 			children = (
-				861528381D2F46EA00F83C6D /* AppDelegate.swift */,
+				86D57CE41E4C1BF500BE1414 /* Controllers */,
+				86D57CDF1E4C186D00BE1414 /* Account */,
+				86AEF9D81E20CA0300FCC929 /* Navigation */,
+				86AEF9D71E20C9DD00FCC929 /* Delegate */,
 				8615283A1D2F46EA00F83C6D /* ViewController.swift */,
 				8615283C1D2F46EA00F83C6D /* Main.storyboard */,
 				8615283F1D2F46EA00F83C6D /* Assets.xcassets */,
@@ -123,6 +132,38 @@
 				8615285A1D2F46EA00F83C6D /* Info.plist */,
 			);
 			path = explorUITests;
+			sourceTree = "<group>";
+		};
+		86AEF9D71E20C9DD00FCC929 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				861528381D2F46EA00F83C6D /* AppDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		86AEF9D81E20CA0300FCC929 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				86AEF9D51E20C8EE00FCC929 /* EXPTabBarNavigation.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		86D57CDF1E4C186D00BE1414 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				86D57CE21E4C18CF00BE1414 /* EXPAccount.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		86D57CE41E4C1BF500BE1414 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86D57CE51E4C1C1900BE1414 /* EXPAccountViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8615283B1D2F46EA00F83C6D /* ViewController.swift in Sources */,
+				86D57CE61E4C1C1900BE1414 /* EXPAccountViewController.swift in Sources */,
+				86D57CE31E4C18CF00BE1414 /* EXPAccount.swift in Sources */,
+				86AEF9D61E20C8EE00FCC929 /* EXPTabBarNavigation.swift in Sources */,
 				861528391D2F46EA00F83C6D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

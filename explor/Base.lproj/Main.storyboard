@@ -1,25 +1,85 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aSb-cu-uIc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Account-->
+        <scene sceneID="Sn9-dM-Z7G">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tqm-0o-TnN" customClass="EXPAccountViewController" customModule="explor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="pdi-QB-86x"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nc4-pW-PE1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="FWi-0t-CQa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ghq-dn-jw1">
+                                <rect key="frame" x="87.5" y="40" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ULT-0I-ugh"/>
+                                    <constraint firstAttribute="height" constant="200" id="gEV-cE-Vw7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ghq-dn-jw1" firstAttribute="centerX" secondItem="FWi-0t-CQa" secondAttribute="centerX" id="SXv-Zt-hPf"/>
+                            <constraint firstItem="ghq-dn-jw1" firstAttribute="top" secondItem="pdi-QB-86x" secondAttribute="bottom" constant="20" id="XXt-jo-0Ib"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Account" id="Jts-S7-s7f"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWH-5V-ffk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1663" y="466"/>
+        </scene>
+        <!--Featured-->
+        <scene sceneID="JMF-Lm-wjX">
+            <objects>
+                <viewController id="qBh-S4-B7N" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NGf-4u-p7T"/>
+                        <viewControllerLayoutGuide type="bottom" id="NpM-yl-tsd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jX9-Uq-iIr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Featured" id="4mt-dl-ZVO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhG-LQ-KT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="467"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rvI-ak-SKg">
+            <objects>
+                <tabBarController id="aSb-cu-uIc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qA8-hr-l2r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.52549019610000003" green="0.52941176469999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qBh-S4-B7N" kind="relationship" relationship="viewControllers" id="l95-Bc-4jx"/>
+                        <segue destination="Tqm-0o-TnN" kind="relationship" relationship="viewControllers" id="xPC-la-7Mb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tV5-RD-0mn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="-290"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="account_avatar" width="512" height="512"/>
+    </resources>
 </document>
